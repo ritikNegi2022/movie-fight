@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+/* font-family: 'Ubuntu', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+/* font-family: 'Roboto Mono', monospace; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, .mainContainer{
+    height: 100vh;
+    background: rgb(99,99,99);
+    background: radial-gradient(circle, rgba(99,99,99,1) 0%, rgba(24,24,24,1) 100%);
+}
+.header{
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    background: rgb(163,163,163);
+    background: linear-gradient(45deg, rgba(163,163,163,1) 0%, rgba(116,116,116,1) 100%);
+    box-shadow: 10px 10px 10px #000000;
+}
+.title{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    /* justify-content: space-around;    */
+    align-items: center;
+}
+.logo, .websiteName{
+    padding: 0 5px;
+}
+.logo{
+    color: black;
+    background: -webkit-linear-gradient(rgb(52, 52, 52), rgb(17, 17, 17));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.websiteName{
+    font-size: 34px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+.body{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* center window */
+.holder{
+    width: 80%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgba(163,163,163,1) 0%, rgba(116,116,116,1) 100%);
+}
+.scroll{
+    width: 98%;
+    height: 98%;
+    display: flex;
+    overflow-y: scroll;
+}
+.window{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    padding: 20px;
+}
+/* search bar and ddropdown */
+.search{
+    caret-color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid black;
+    outline: none;
+    height: 30px;
+    width: 240px;
+    padding-left: 10px;
+}
+.search, .search::placeholder{
+    color: black;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+.dropdownHolder{
+    display: flex;
+}
+.is-active{
+    z-index: 1;
+    position: absolute;
+    width: 240px;
+    height: 360px;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.dropdown-item{
+    height: 90px;
+    display: flex;
+    border: none;
+    padding: 0 5px ;
+    font-size: 0.7rem;
+    font-weight: bolder;
+    font-family: 'Ubuntu', sans-serif;
+    /* margin: 5px 0; */
+}
+::-webkit-scrollbar{
+    display: none;
+    width: 0.3rem;
+}
+::-webkit-scrollbar-track{
+    display: none;
+    border-radius: 0.5rem;
+    margin-block: 5px;   
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 0.5rem;
+    background-color: rgb(56, 56, 56);
+}
+.dropdown-item:hover{
+    background-color: grey;
+}
+.dropdown-item span{
+    padding: 5px;
+}
+.poster{
+    padding: 5px 0;
+    height: 90px;
+}
+.dropdown-content{
+    display: flex;
+    flex-direction: column;
+}
+/* summary window */
+
+.summary-one, .summary-two{
+    margin-block: 20px;
+    /* overflow-y: scroll; */
+}
+/* .summary-one::-webkit-scrollbar, .summary-two::-webkit-scrollbar{
+    display: none;
+} */
+.image img{
+    height: 180px;
+    padding: 0 10px;
+}
+.media{
+
+    display: flex;
+}
+.summaryContainer{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    height: 180px;
+    overflow-y: scroll;
+}
+.content::-webkit-scrollbar{
+    display: none;
+}
+.content h1, .content h4, .content p{
+    padding: 0px 2px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+.content p{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+    padding: 9px 2px;
+}
+
+.notification-area{
+    padding: 10px 10px;
+}
+.notificaton{
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 10px;
+    background: rgb(27, 27, 27);
+    color: white;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+.title, .subtitle{
+    margin: 5px 0px;
+}
+.title{
+    font-weight: bolder;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+}
+.higher{
+    background-image: url(./icons/arrow-up-solid.svg);
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+.lower{
+    background-image: url(./icons/arrow-down-solid.svg);
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
+.equal{
+    background-image: url(./icons/equals-solid.svg);
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+}
